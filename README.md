@@ -56,7 +56,7 @@
     - 예시
       - `Fix calculation in process.uptime()`
 
-  - 세 줄 이상 작성해야 하고, 커밋의 두 번째 줄은 반드시 비워야 합니다. 세 번째 줄의 항목부터 상세 내용을 추가( `-`  + 내용)할 수 있습니다.
+  - 세 줄 이상 작성해야 하고, 커밋의 두 번째 줄은 반드시 비워야 합니다. 세 번째 줄의 항목부터 상세 내용을 추가( `-` + 내용)할 수 있습니다.
     - 예외사항
       - 오타 수정 `Fix typo`
     - 예시  
@@ -74,7 +74,7 @@
       - `Fix A`: A 수정
       - `Fix A in B`: B의 A 수정
       - `Fix A which B/Fix A that B`: B인 A 수정
-      - `Fix A to B/FIx A to be B`: B를 위해 A 수정 | B하기 위해 A 수정
+      - `Fix A to B/Fix A to be B`: B를 위해 A 수정 | B하기 위해 A 수정
       - `Fix A so that B`: A 수정해서 B (B 상태 강조)
       - `Fix A[issue|error|crash] where B`: B하는 A 수정
       - `Fix A when B`: B에 발생하는 A 수정
@@ -89,8 +89,8 @@
     - **Use** [사용]
       - `Use A`: A 사용
       - `Use A for B`: B를 위한 A 사용
-      - `Use A to B`: B에 A 사용 (to-부정사 B 가능)
-      - `Use A in B`: B에 A 사용 (B 내부에서 A 사용)
+      - `Use A to B`: B에 A 사용 (to-부정사 B 허용)
+      - `Use A in B`: B에 A 사용 | B 내부에서 A 사용
       - `Use A instead of B`: B 대신에 A 사용
     - **Apply** [적용]
       - `Apply A`: A 적용
@@ -106,7 +106,7 @@
     - **Improve**/**Enhance** [향상/개선(테스트/커버리지/성능)]
       - `Improve A`: A 향상
     - **Make** [동작 변경]
-      - `Make A B`: A를 B하게 하다(to-부정사 B) | A를 B로 만들다
+      - `Make A B`: A를 B하게 하다 (to-부정사 B 허용) | A를 B로 만들다
     - **Implement** [Add 보다 큰 구현]
       - `Implement A`: A 구현
       - `Implement A to B`: B에 A 구현
@@ -116,14 +116,14 @@
       - `Ensure A`: A를 확실하게 하다
     - **Prevent** [접근제한]
       - `Prevent A`: A를 막다
-      - `Prevent A from B`: A를 B하지 못하게 막다.
+      - `Prevent A from B`: A를 B하지 못하게 막다
     - **Avoid** [(조건등을) 피하다]
       - `Avoid A`: A를 피하다.
-      - `Avoid A if B/Avoid A when B`: B일 때 A에 걸리지 않도록 하다.
+      - `Avoid A if B/Avoid A when B`: B일 때 A에 걸리지 않도록 하다
     - **Move** [문서/코드 이동]
-      - `Move A to B/Move A into B`:
+      - `Move A to B/Move A into B`: A를 B로 이동시키다
     - **Rename** [(파일/메소드의) 이름 수정]
-      - `Rename A to B`: A를 B로 이름을 바꾸다.
+      - `Rename A to B`: A를 B로 이름을 바꾸다
     - **Allow** [허용]
       - `Allow A to B`: A가 B할 수 있도록 허용
     - **Verify** [검증]
