@@ -78,11 +78,11 @@
       - `Fix A so that B`: A 수정해서 B (B 상태 강조)
       - `Fix A[issue|error|crash] where B`: B하는 A 수정
       - `Fix A when B`: B에 발생하는 A 수정
-    - **Add** [코드추가/테스트추가/문서추가]
+    - **Add** [추가(코드/테스트/문서)]
       - `Add A`: A 추가
       - `Add A for B`: B를 위한 A 추가
       - `Add A to B`: B에 A 추가
-    - **Remove** [코드삭제]
+    - **Remove** [삭제(코드/문서)]
       > 보통 (unnecessary|useless|unneeded|unused|duplicated) + A 형태  
       - `Remove A`: A 삭제
       - `Remove A from B`: B에서 A 삭제
@@ -110,25 +110,25 @@
     - **Implement** [Add 보다 큰 구현]
       - `Implement A`: A 구현
       - `Implement A to B`: B에 A 구현
-    - **Correct** [문법/타입 등을 맞도록 수정]
+    - **Correct** [(문법/타입 등을) 맞도록 수정]
       - `Correct A`: A를 맞게 하다
     - **Ensure**/**Make sure** [검증]
       - `Ensure A`: A를 확실하게 하다
     - **Prevent** [접근제한]
       - `Prevent A`: A를 막다
       - `Prevent A from B`: A를 B하지 못하게 막다
-    - **Avoid** [(조건등을) 피하다]
+    - **Avoid** [(조건 등을) 피하다]
       - `Avoid A`: A를 피하다.
       - `Avoid A if B/Avoid A when B`: B일 때 A에 걸리지 않도록 하다
-    - **Move** [문서/코드 이동]
-      - `Move A to B/Move A into B`: A를 B로 이동시키다
-    - **Rename** [(파일/메소드의) 이름 수정]
+    - **Move** [이동(코드/문서)]
+      - `Move A to B/Move A into B`: A를 B로 이동하다
+    - **Rename** [이름 수정(코드/문서/메소드)]
       - `Rename A to B`: A를 B로 이름을 바꾸다
     - **Allow** [허용]
       - `Allow A to B`: A가 B할 수 있도록 허용
     - **Verify** [검증]
       - `Verify A`: A를 검증
-    - **Set** [변수 등 설정]
+    - **Set** [설정(변수/값)]
       - `Set A to B`: A를 B로 설정
     - **Pass** [파라메터]
       - `Pass A to B`: A를 B로 넘기다
