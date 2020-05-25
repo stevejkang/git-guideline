@@ -153,7 +153,7 @@
 
 #### 2.2.1. 브랜치 전략
 
-  Git Flow에서는 용도/환경에 따라 브랜치를 구분합니다. 메인 브랜치는 master, develop 브랜치가 해당되며, 그 외에 보조 브랜치는 feature, hotfix, release 브랜치 등이 해당됩니다.
+  Git Flow에서는 용도/환경에 따라 브랜치를 구분합니다. 메인 브랜치는 master, develop 브랜치가 해당되며, 그 외에 보조 브랜치는 feature, release, hotfix, fix 브랜치 등이 해당됩니다.
 
   - **master**  
   프로젝트의 뿌리가 되는 브랜치로, 해당 브랜치의 HEAD는 production 환경에 배포되었거나, 곧 배포될 예정임(production-ready)을 의미합니다. 실제 서비스에서는 실 서버와 sync가 맞아야 합니다.  
@@ -243,15 +243,35 @@
       </tbody>
     </table>
 
-  > WIP release, hotfix
+  여기까지 정리해보면 전체적인 브랜치 분기의 depth를 가장 위의 계층부터 나타내면 아래와 같습니다.
 
-#### 2.2.2. 배포 전략
+    master -> develop -> feature/* -> work/*
+  
+  develop 브랜치에서는 여러 개의 feature 브랜치가 분기될 수 있으며, 하나의 feature 브랜치에는 여러개의 work 브랜치가 분기될 수 있습니다.
 
-  > WIP master/develop, release, hotfix
+  아래는 release, hotfix, fix 브랜치로, 각각의 상황에 따라 사용되는 보조 브랜치입니다.
 
-#### 2.2.3. 병합/푸시 전략
+  > WIP release, hotfix, fix
 
-  > WIP rebase, merge
+### 2.3. 적용
+
+#### 2.3.1. 일반적인 플로우
+
+  > WIP general flow
+
+#### 2.3.2. 릴리즈 플로우
+
+  > WIP release flow
+
+#### 2.3.3. 핫픽스 플로우
+
+  > WIP hotfix flow
+
+### 2.4. 고민해볼 내용
+
+    merge와 rebase. 무엇이 정답일까?
+    
+    > WIP
 
 ## Reference
 
