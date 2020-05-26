@@ -251,7 +251,87 @@
 
   아래는 release, hotfix, fix 브랜치로, 각각의 상황에 따라 사용되는 보조 브랜치입니다.
 
-  > WIP release, hotfix, fix
+  - **release**  
+  최종 프로덕션으로 올릴 상태가 되었을 때, 이를 master로 반영하기 직전에 생성되는 브랜치. 보통의 경우, develop은 master보다 업데이트 주기가 짧기 때문에, develop에서 작업 중인 한 시점에서 release 브랜치를 생성하여, 최종적인 릴리즈 준비를 할 수 있습니다.  
+  이렇게 진행할 경우, 처음 release가 분기되고 그 이후에 develop에 업데이트 되는 내용들은 다음 release 브랜치가 분기될 때 반영하게 되어, 현재 분기된 release 브랜치에 한해 정확한 범위 내에 업데이트를 진행할 수 있게 됩니다.  
+  이 브랜치가 master로 반영될 때, 태그를 이용해 버저닝(versioning)을 진행하는 것을 권장하며, 반영 후에는 develop에도 동일한 내용을 병합합니다.
+  
+    <table>
+      <thead>
+          <tr>
+              <th colspan=3>브랜치 상세</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td rowspan=3>release</td>
+              <td>시작브랜치</td>
+              <td>develop</td>
+          </tr>
+          <tr>
+              <td>병합브랜치(방향/순서)</td>
+              <td>master / develop</td>
+          </tr>
+          <tr>
+              <td>네이밍 규칙</td>
+              <td>release-* 또는 release/*</td>
+          </tr>
+      </tbody>
+    </table>
+
+  - **hotfix**  
+  미리 계획되지 못한 배포를 위한 브랜치. 실제 프로덕션에 장애를 일으킬 정도의 크리티컬(critical)한 이슈가 발생되어 긴급히 수정해야 할 때 사용합니다.  
+  이전 release 브랜치가 master에 반영된 시점(태그로 버저닝된 시점)에서 hotfix 브랜치를 분기하여 이를 master, develop 순으로 반영을 진행합니다.
+
+    <table>
+      <thead>
+          <tr>
+              <th colspan=3>브랜치 상세</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td rowspan=3>hotfix</td>
+              <td>시작브랜치</td>
+              <td>master</td>
+          </tr>
+          <tr>
+              <td>병합브랜치(방향/순서)</td>
+              <td>master / develop</td>
+          </tr>
+          <tr>
+              <td>네이밍 규칙</td>
+              <td>hotfix-* 또는 hotfix/*</td>
+          </tr>
+      </tbody>
+    </table>
+
+  - **fix**  
+  기 리포팅된 이슈 혹은 버그를 해결하기 위해 생성되는 브랜치. 보통 bugfix 브랜치라고 불리기도 하며, 서비스에 중대한 영향을 끼치진 않지만, 기능으로 분류될 수 없고, 버그라 판단되는 경우, 이를 서비스에 반영하기 위해 생성합니다.  
+  보통 develop에서 분기되어 이를 develop, master 순으로 병합되며, 표면적으로는 feature 브랜치와 동일합니다.
+
+    <table>
+      <thead>
+          <tr>
+              <th colspan=3>브랜치 상세</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td rowspan=3>fix</td>
+              <td>시작브랜치</td>
+              <td>develop</td>
+          </tr>
+          <tr>
+              <td>병합브랜치(방향/순서)</td>
+              <td>develop / master</td>
+          </tr>
+          <tr>
+              <td>네이밍 규칙</td>
+              <td>fix-* 또는 fix/*</td>
+          </tr>
+      </tbody>
+    </table> 
 
 ### 2.3. 적용
 
