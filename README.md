@@ -356,6 +356,8 @@
 ## Reference
 
   - [좋은 git commit 메시지를 위한 영어 사전](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
+  - [GIT을 기반으로 한 프로젝트 개발프로세스](https://gist.github.com/ihoneymon/a28138ee5309c73e94f9)
+  - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 
 ## License
 
