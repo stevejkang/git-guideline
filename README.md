@@ -202,7 +202,7 @@
           <tr>
               <td rowspan=3>feature</td>
               <td>시작브랜치</td>
-              <td>dev</td>
+              <td>develop</td>
           </tr>
           <tr>
               <td>병합브랜치(방향/순서)</td>
