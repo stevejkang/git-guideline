@@ -99,10 +99,13 @@
       - `Refactor A`: A 리팩토링
     - **Simplify** [단순화(행위/기능/메소드)]
       - `Simplify A`: A 단순화
-    - **Update** [문서/리소스 버전 업]
+    - **Update** [업데이트/버전 업(문서/리소스)]
       - `Update A`: A 최신화
       - `Update A to B`: A를 B로 최신화
       - `Update A for B`: B를 위한 A 업데이트
+    - **Change** [변경]
+      - `Change A`: A 변경
+      - `Change A into B`: A를 B로 변경
     - **Improve**/**Enhance** [향상/개선(테스트/커버리지/성능)]
       - `Improve A`: A 향상
     - **Make** [동작 변경]
@@ -134,6 +137,8 @@
       - `Pass A to B`: A를 B로 넘기다
     - **Disable** [비활성화]
       - `Disable A`: A를 비활성화 하다
+    - **Organize** [정리]
+      - `Organize A`: A 정리
 
 ## 2. Git Flow & Branch
 
