@@ -343,6 +343,8 @@
 
 #### 2.3.1. 일반적인 플로우
 
+  이 섹션에서 말하는 '일반적인' 플로우란 릴리즈 혹은 핫픽스와 같은 상황을 제외한 가장 보편적인(common) 상황을 다룹니다. 조직에 따라 work(개인 작업) 브랜치 대신에 fork하여 사용할 수 있고, merge 대신 rebase를 택할 수도 있습니다. ([2.4.1. merge와 rebase 무엇이 정답일까?](#241-merge와-rebase-무엇이-정답일까) 참고)
+
   > WIP general flow
 
 #### 2.3.2. 릴리즈 플로우
@@ -355,15 +357,57 @@
 
 ### 2.4. 고민해볼 내용
 
-    merge와 rebase. 무엇이 정답일까?
-    
-    > WIP
+#### 2.4.1. merge와 rebase 무엇이 정답일까?
+
+  merge와 rebase의 가장 큰 차이는 병합 혹은 작업 내용이 합쳐질 때 이에 대한 커밋이 남는지에 있습니다. merge 커밋은 흔히 말하는 merge 커밋을 남기지만, rebase는 말그대로 base를 바꾸는 작업이기에 커밋이 남지 않습니다.
+
+  좀 더 자세히 알아보면 다음과 같습니다.
+
+  **merge**  
+  feature/order에서 분기한 steve/pg 브랜치가 있다고 가정합니다.  
+  > [feature/order] git commit -m "a"  
+  > [feature/order] git commit -m "b"  
+  > [feature/order] git checkout -b steve/pg  
+  > [steve/pg] git commit -m "x"  
+  > [steve/pg] git commit -m "y"
+
+                    (a)     (b)
+    feature/order   * ----- *
+                             \
+    steve/pg                  ----- * ----- *
+                                    (x)     (y)
+
+  위 상태에서 작업 내용을 feature/order로 병합하려 할 때, 만약 다른 팀원이 feature/order 브랜치에 반영한 내용이 없고, 분기 이후로 진행된 커밋이 없다는 것이 origin으로부터 확인되면, fast-forward merge 혹은 non-fast-forward merge를 진행할 수 있습니다.
+  
+  - fast-forward merge를 하면 다음과 같습니다.
+    > [steve/pg] git checkout feature/order  
+    > [feature/order] git merge steve/pg
+      
+        (a)     (b)
+        * ----- *
+                 \                    steve/pg
+                  ----- * ----- *     feature/order 
+                        (x)     (y)
+
+  - non-fast-forward를 하면 다음과 같습니다. (m은 merge commit)
+    > [steve/pg] git checkout feature/order  
+    > [feature/order] git merge --no-ff steve/pg
+      
+                        (a)     (b)                     (m)
+        feature/order   * ----- *                       * -----
+                                 \                     /
+        steve/pg                  ----- * ----- * -----
+                                        (x)     (y)
+
+  > WIP Difference between merge and rebase
 
 ## Reference
 
   - [좋은 git commit 메시지를 위한 영어 사전](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
   - [GIT을 기반으로 한 프로젝트 개발프로세스](https://gist.github.com/ihoneymon/a28138ee5309c73e94f9)
   - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+  - [Merge Branch - Backlog](https://backlog.com/git-tutorial/integrating-branches/git-merge/)
+  - [Rebase Branch - Backlog](https://backlog.com/git-tutorial/integrating-branches/rebase-branch/)
 
 ## License
 
