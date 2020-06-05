@@ -162,7 +162,7 @@
 
 #### 2.2.1. 브랜치 전략
 
-  Git Flow에서는 용도/환경에 따라 브랜치를 구분합니다. 메인 브랜치는 master, develop 브랜치가 해당되며, 그 외에 보조 브랜치는 feature, release, hotfix, fix 브랜치 등이 해당됩니다.
+  Git Flow에서는 용도/환경에 따라 브랜치를 구분합니다. 메인 브랜치는 master, develop 브랜치가 해당되며, 그 외에 보조 브랜치는 feature, release, hotfix, bugfix 브랜치 등이 해당됩니다.
 
   - **master**  
   프로젝트의 뿌리가 되는 브랜치로, 해당 브랜치의 HEAD는 production 환경에 배포되었거나, 곧 배포될 예정임(production-ready)을 의미합니다. 실제 서비스에서는 실 서버와 sync가 맞아야 합니다.  
@@ -258,7 +258,7 @@
   
   develop 브랜치에서는 여러 개의 feature 브랜치가 분기될 수 있으며, 하나의 feature 브랜치에는 여러개의 work 브랜치가 분기될 수 있습니다.
 
-  아래는 release, hotfix, fix 브랜치로, 각각의 상황에 따라 사용되는 보조 브랜치입니다.
+  아래는 release, hotfix, bugfix 브랜치로, 각각의 상황에 따라 사용되는 보조 브랜치입니다.
 
   - **release**  
   최종 프로덕션으로 올릴 상태가 되었을 때, 이를 master로 반영하기 직전에 생성되는 브랜치. 보통의 경우, develop은 master보다 업데이트 주기가 짧기 때문에, develop에서 작업 중인 한 시점에서 release 브랜치를 생성하여, 최종적인 릴리즈 준비를 할 수 있습니다.  
@@ -315,8 +315,8 @@
       </tbody>
     </table>
 
-  - **fix**  
-  기존에 리포팅된 이슈 혹은 버그를 해결하기 위해 생성되는 브랜치. 보통 bugfix 브랜치라고 불리기도 하며, 서비스에 중대한 영향을 끼치진 않지만, 기능으로 분류될 수 없고, 버그라 판단되는 경우, 이를 서비스에 반영하기 위해 생성합니다.  
+  - **bugfix**  
+  기존에 리포팅된 이슈 혹은 버그를 해결하기 위해 생성되는 브랜치. 보통 fix 브랜치라고 불리기도 하며, 서비스에 중대한 영향을 끼치진 않지만, 기능으로 분류될 수 없고, 버그라 판단되는 경우, 이를 서비스에 반영하기 위해 생성합니다.  
   보통 develop에서 분기되어 이를 develop, master 순으로 병합되며, 표면적으로는 feature 브랜치와 동일합니다.
 
     <table>
@@ -327,7 +327,7 @@
       </thead>
       <tbody>
           <tr>
-              <td rowspan=3>fix</td>
+              <td rowspan=3>bugfix</td>
               <td>시작브랜치</td>
               <td>develop</td>
           </tr>
@@ -337,7 +337,7 @@
           </tr>
           <tr>
               <td>네이밍 규칙</td>
-              <td>fix-* 또는 fix/*</td>
+              <td>bugfix-* 또는 bugfix/*</td>
           </tr>
       </tbody>
     </table> 
