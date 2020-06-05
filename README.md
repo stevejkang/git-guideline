@@ -9,8 +9,11 @@
 ## 목차
   1. [Commit Convention](#1-commit-convention)
   2. [Git Flow & Branch](#2-git-flow--branch)
-  3. Pull Request
-  4. Issue
+  3. Issue
+  4. Pull Request
+  5. Action
+  6. Wiki
+  7. Troubleshooting
 
 ## 1. Commit Convention
 
