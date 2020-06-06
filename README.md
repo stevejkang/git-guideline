@@ -386,7 +386,7 @@
   
   - fast-forward merge를 하면 다음과 같습니다.
     > [steve/pg] git checkout feature/order  
-    > [feature/order] git merge steve/pg
+    > [feature/order] git merge --ff-only steve/pg
       
         (a)     (b)
         * ----- *
