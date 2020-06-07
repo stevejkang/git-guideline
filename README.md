@@ -17,6 +17,7 @@
   8. [이제 뭘하면 되나요?](#8-so-what-should-i-do)
 
 ## 1. Commit Convention
+> [상단으로 ⬆️](#github-guideline)  
 
 ### 1.1. 커밋의 정의
 
@@ -146,6 +147,7 @@
       - `Organize A`: A 정리
 
 ## 2. Git Flow & Branch
+> [상단으로 ⬆️](#github-guideline)  
 
 ### 2.1. 개요
 
@@ -406,6 +408,24 @@
                                         (x)     (y)
 
   > WIP Difference between merge and rebase
+
+## 3. Issue
+> [상단으로 ⬆️](#github-guideline)  
+
+## 4. Pull Request
+> [상단으로 ⬆️](#github-guideline)  
+
+## 5. Actions
+> [상단으로 ⬆️](#github-guideline)  
+
+## 6. Wiki
+> [상단으로 ⬆️](#github-guideline)  
+
+## 7. Troubleshooting
+> [상단으로 ⬆️](#github-guideline)  
+
+## 8. So, What should I do?
+> [상단으로 ⬆️](#github-guideline)  
 
 ## Reference
 
