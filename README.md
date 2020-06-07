@@ -6,14 +6,15 @@
 
  [![Last Commit](https://img.shields.io/github/last-commit/stevejkang/github-guideline.svg)](https://github.com/stevejkang/github-guideline/commits)
 
-## 목차
+## Table of Contents
   1. [Commit Convention](#1-commit-convention)
   2. [Git Flow & Branch](#2-git-flow--branch)
-  3. Issue
-  4. Pull Request
-  5. Action
-  6. Wiki
-  7. Troubleshooting
+  3. [Issue](#3-issue)
+  4. [Pull Request](#4-pull-request)
+  5. [Actions](#5-actions)
+  6. [Wiki](#6-wiki)
+  7. [Troubleshooting](#7-troubleshooting)
+  8. [이제 뭘하면 되나요?](#8-so-what-should-i-do)
 
 ## 1. Commit Convention
 
