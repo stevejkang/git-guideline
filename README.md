@@ -426,6 +426,41 @@
 
   > 작업이 완료된 steve/pg 브랜치를 삭제하면 분기된 브랜치의 형태와 그 커밋은 유지되고 브랜치만 삭제됩니다.
 
+  **rebase**  
+  리베이스는 병합(merge)한다는 개념과는 거리가 있지만, 브랜치의 base를 옮겨 다른 브랜치의 내용을 반영한다는 점에서는 비슷합니다. 
+  
+  rebase 작업을 하면서 가장 주의해야 할 것은 rebase 후에 그 rebase를 적용받은 커밋들은 commit hash가 바뀌게 됩니다. 즉, 그렇게 바뀐 커밋이 이미 remote(github 등) branch에 올라갔던 커밋이라면 해당 내용을 (불가피하게) force-push(`--force`) 해야 할 것이고, 누군가와 동일한 브랜치에서 협업을 하고 있다면 푸시 후 `git reset --hard origin/<branch>` 등으로 다시 로컬에 반영이 필요할 것입니다.
+  
+  결론적으로 개인 브랜치에서는 리베이스를 자유롭게 해도 무방하지만, 다양한 협업과 커밋이 짧은 주기로 이루어진다면 협업에 많은 주의가 필요합니다. (항상 up-stream 설정을 해두고 로컬의 상태를 최신화할 필요가 있습니다.)
+
+  rebase는 보통 하위 브랜치에서 상위 브랜치를 rebase한다고 표현하며, 현재 브랜치가 "하위 브랜치", 바라보는/병합 브랜치가 "상위 브랜치"가 됩니다. 상위 브랜치의 변경사항을 모두 반영하여, 그 상위 브랜치를 기반(base)으로 하여 현재 브랜치의 base 이후 모든 커밋을 최신화한다는 의미를 가지고 있습니다.
+
+  예를 들어, 기존의 상태가 다음과 같다면,
+
+                    (a)     (b)
+    feature/order   * ----- *
+                             \
+    steve/pg                  ----- * ----- *
+                                    (x)     (y)
+
+  steve/pg에서 feature/order 기준으로 rebase할 수 있습니다.
+
+  > [steve/pg] git rebase feature/order  
+  > f/o가 feature/order, s/p가 steve/pg 브랜치.  
+
+     (a)    (b)     (x)     (y)
+    * ----- * ----- * ----- *
+            (f/o)           (s/p)
+
+  이때, steve/pg에서 커밋했던 (x), (y) 커밋이 영향을 받습니다. 이미 remote에 올라갔다면 force push로 업데이트해야 합니다.
+
+  만약 rebase에서 conflict가 난 경우(매우 빈번히 일어납니다.), 각 파일에서 conflict를 해결하고 rebase를 진행하면 됩니다. rebase는 진행 방법이 현재 브랜치의 커밋을 하나하나 탐색하며, 적용하는 방법이므로, 한 번 rebase를 할 때 각 커밋별로 여러번 해결해야 하는 경우도 있습니다.
+
+  > [steve/pg] git rebase feature/order  
+  > [steve/pg] [CONFLICT 발생]  
+  > [steve/pg] git add [confilcted file]  
+  > [steve/pg] git rebase --continue
+
 ## 3. Issue
 > [상단으로 ⬆️](#github-guideline)  
 
