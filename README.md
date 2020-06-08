@@ -368,8 +368,8 @@
 #### 2.4.1. merge와 rebase 무엇이 정답일까?
 
   merge와 rebase의 가장 큰 차이는 병합 혹은 작업 내용이 합쳐질 때 이에 대한 커밋이 남는지에 있습니다. merge 커밋은 흔히 말하는 merge 커밋을 남기지만, rebase는 말그대로 base를 바꾸는 작업이기에 커밋이 남지 않습니다.
-
-  좀 더 자세히 알아보면 다음과 같습니다.
+  
+  > 기본적으로 그렇다는 것이지, 항상 그러하다고 할 수 없습니다. 커밋으로 구분하기 보다는, 그 원리의 차이를 이해하는 것이 중요합니다. 아래 예시로 확인할 수 있습니다.
 
   **merge**  
   feature/order에서 분기한 steve/pg 브랜치가 있다고 가정합니다.  
@@ -390,12 +390,16 @@
   - fast-forward merge를 하면 다음과 같습니다.
     > [steve/pg] git checkout feature/order  
     > [feature/order] git merge --ff-only steve/pg
+
+    > 이 경우에는 상위 브랜치에 변경사항이 없으므로 뒤에서 나올 rebase와 동일하게 사용할 수 있습니다. (아래에서 나올 예시와 다른 점은 상위 브랜치에서 하위 브랜치로 rebase 한다는 점입니다.)
       
         (a)     (b)
         * ----- *
                  \                    steve/pg
                   ----- * ----- *     feature/order 
                         (x)     (y)
+
+    > 작업이 완료된 steve/pg 브랜치를 삭제하여 히스토리를 깔끔하게 유지할 수 있습니다.
 
   - non-fast-forward를 하면 다음과 같습니다. (m은 merge commit)
     > [steve/pg] git checkout feature/order  
@@ -407,7 +411,20 @@
         steve/pg                  ----- * ----- * -----
                                         (x)     (y)
 
-  > WIP Difference between merge and rebase
+    > 작업이 완료된 steve/pg 브랜치를 삭제하면 분기된 브랜치의 형태와 그 커밋은 유지되고 브랜치만 삭제됩니다.
+
+  하지만, feature/order에 변경사항이 있고 rebase 한 적도 없는 경우, 실질적인 머지 커밋으로만 병합이 가능합니다. 이 때는 non-fast-forward merge와 fast-forward merge 모두 동일하게 커밋이 남게 됩니다.
+
+  > [steve/pg] git checkout feature/order  
+  > [feature/order] git merge steve/pg
+    
+                      (a)     (b)                     (m)
+      feature/order   * ----- *                       * -----
+                                \                     /
+      steve/pg                  ----- * ----- * -----
+                                      (x)     (y)
+
+  > 작업이 완료된 steve/pg 브랜치를 삭제하면 분기된 브랜치의 형태와 그 커밋은 유지되고 브랜치만 삭제됩니다.
 
 ## 3. Issue
 > [상단으로 ⬆️](#github-guideline)  
