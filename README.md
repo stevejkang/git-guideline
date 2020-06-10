@@ -4,7 +4,8 @@
 
   Personal github guideline about commit convention, git flow, issue/pull-request templates, etc.
 
- [![Last Commit](https://img.shields.io/github/last-commit/stevejkang/github-guideline.svg)](https://github.com/stevejkang/github-guideline/commits)
+  [![Last Commit](https://img.shields.io/github/last-commit/stevejkang/github-guideline.svg)](https://github.com/stevejkang/github-guideline/commits)
+  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fstevejkang%2Fgithub-guideline)](https://github.com/stevejkang/github-guideline)
 
 ## Table of Contents
   1. [Commit Convention](#1-commit-convention)
