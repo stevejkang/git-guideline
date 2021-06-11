@@ -1,11 +1,11 @@
-<a href="https://github.com/stevejkang/github-guideline"><img src="https://raw.githubusercontent.com/stevejkang/emoji-for-readme/master/emoji/triangular-ruler.png" align="right" width="90" height="90" /></a>
+<a href="https://github.com/stevejkang/git-guideline"><img src="https://raw.githubusercontent.com/stevejkang/emoji-for-readme/master/emoji/triangular-ruler.png" align="right" width="90" height="90" /></a>
 
-# github-guideline
+# git-guideline
 
-  Personal github guideline about commit convention, git flow, issue/pull-request templates, etc.
+  Personal git/github guideline about commit convention, git flow, issue/pull-request templates, etc.
 
-  [![Last Commit](https://img.shields.io/github/last-commit/stevejkang/github-guideline.svg)](https://github.com/stevejkang/github-guideline/commits)
-  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fstevejkang%2Fgithub-guideline)](https://github.com/stevejkang/github-guideline)
+  [![Last Commit](https://img.shields.io/github/last-commit/stevejkang/git-guideline.svg)](https://github.com/stevejkang/git-guideline/commits)
+  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fstevejkang%2Fgit-guideline)](https://github.com/stevejkang/git-guideline)
 
 ## Table of Contents
   1. [Commit Convention](#1-commit-convention)
@@ -18,7 +18,7 @@
   8. [이제 뭘하면 되나요?](#8-so-what-should-i-do)
 
 ## 1. Commit Convention
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
 ### 1.1. 커밋의 정의
 
@@ -166,7 +166,7 @@
       - `Organize A`: A 정리
 
 ## 2. Git Flow & Branch
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
 ### 2.1. 개요
 
@@ -482,7 +482,7 @@
   > [steve/pg] git rebase --continue
 
 ## 3. Issue
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
  
   여기부터 [6. Wiki](#6-wiki)까지는 GitHub 위주의 내용이지만, [3. Issue](#3-issue)와 [4. Pull Request](#4-pull-request)는 다른 git hosting service(bitbucket, gitlab 등)에서도 사용되는 것으로 기본적인 개념은 동일합니다. 그러나 여기서는 github 환경을 위주로 설명합니다.
  
@@ -490,19 +490,19 @@
  
  ### 3.1. Issue Template
 ## 4. Pull Request
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
 ## 5. Actions
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
 ## 6. Wiki
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
 ## 7. Troubleshooting
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
 ## 8. So, What should I do?
-> [상단으로 ⬆️](#github-guideline)  
+> [상단으로 ⬆️](#git-guideline)  
 
   git(혹은 github)은 사용하는 사람, 혹은 조직에 따라 매우 유연하게 사용되어야 합니다. 조직이라면, 개발 조직내 인원 모두가 git과 gitflow에 대한 이해가 되어 있을 때, 제대로 작동할 수 있습니다.
 
