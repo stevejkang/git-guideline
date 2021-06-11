@@ -15,7 +15,8 @@
   5. [Actions](#5-actions)
   6. [Wiki](#6-wiki)
   7. [Troubleshooting](#7-troubleshooting)
-  8. [이제 뭘하면 되나요?](#8-so-what-should-i-do)
+  8. [Tips](#8-tips)
+  9. [이제 뭘하면 되나요?](#9-so-what-should-i-do)
 
 ## 1. Commit Convention
 > [상단으로 ⬆️](#git-guideline)  
@@ -501,7 +502,10 @@
 ## 7. Troubleshooting
 > [상단으로 ⬆️](#git-guideline)  
 
-## 8. So, What should I do?
+## 8. Tips
+> [상단으로 ⬆️](#git-guideline)  
+
+## 9. So, What should I do?
 > [상단으로 ⬆️](#git-guideline)  
 
   git(혹은 github)은 사용하는 사람, 혹은 조직에 따라 매우 유연하게 사용되어야 합니다. 조직이라면, 개발 조직내 인원 모두가 git과 gitflow에 대한 이해가 되어 있을 때, 제대로 작동할 수 있습니다.
