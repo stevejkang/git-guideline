@@ -183,7 +183,7 @@
 
 ### 2.2. 방법
   
-  > Vincent Driessen이 제한한 Git Flow는 다음 [PDF](https://nvie.com/files/Git-branching-model.pdf)로 한 눈에 확인할 수 있습니다.
+  > Vincent Driessen이 제안한 Git Flow는 다음 [PDF](https://nvie.com/files/Git-branching-model.pdf)로 한 눈에 확인할 수 있습니다.
 
 #### 2.2.1. 브랜치 전략
 
